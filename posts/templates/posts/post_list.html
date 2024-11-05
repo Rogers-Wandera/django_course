@@ -2,5 +2,12 @@
 {% extends "layout.html" %} 
 {% block title %} Posts {% endblock %} 
 {% block content %}
-<h1>Post Page</h1>
-{% endblock %}
+<h1>Posts Page</h1>
+
+{% for post in posts %}
+<article>
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.date}}</p>
+  <p>{{post.body}}</p>
+</article>
+{% endfor %} {% endblock %}
